@@ -1,0 +1,105 @@
+🔺 Python Character Pyramid Generator
+
+A simple Python program that generates a centered pyramid pattern using a user-selected character. The pyramid height is controlled by an odd number entered by the user.
+
+This project demonstrates basic Python concepts such as loops, input validation, and pattern generation.
+
+📌 Description
+
+This script allows the user to:
+
+Enter the maximum width of the pyramid (must be an odd number)
+
+Choose a character to build the pyramid
+
+Automatically generate a centered pyramid using the chosen character
+
+The program uses Python’s built-in features along with the re module (imported for potential input validation extension).
+
+⚙️ Features
+
+✅ Generates a symmetric pyramid pattern
+
+✅ User-defined pyramid size
+
+✅ User-selected character
+
+✅ Automatically centers the pyramid
+
+✅ Beginner-friendly and easy to understand
+
+🛠 Requirements
+
+Python 3.x
+
+No external libraries required
+
+🚀 How to Run
+
+Save the code in a file, for example:
+
+pyramid.py
+
+
+Run the program in the terminal or command prompt:
+
+python pyramid.py
+
+🧠 Example Usage
+enter the maximum number of characters in the pyramid: 7
+enter the character for pyramid: *
+
+      *
+    * * *
+  * * * * *
+* * * * * * *
+
+📖 How It Works
+
+The program follows these steps:
+
+Prompts the user to enter the maximum pyramid width
+
+Ensures the number is odd for proper symmetry
+
+Prompts the user to enter a character
+
+Uses nested loops to:
+
+Print spaces for alignment
+
+Print characters to form the pyramid shape
+
+Displays the pyramid in the console
+
+🧩 Code Structure
+
+main() – Controls program flow
+
+Input handling – Collects pyramid size and character
+
+Loop logic – Builds pyramid rows
+
+Output formatting – Aligns pyramid correctly
+
+⚠️ Limitations
+
+Only works with odd numbers
+
+Runs in the command line (no GUI)
+
+Does not currently validate character length (multiple characters allowed)
+
+🎯 Learning Objectives
+
+This project helps practice:
+
+Python loops (for, while)
+
+Nested loops
+
+User input handling
+
+Pattern printing
+
+Basic program structure
