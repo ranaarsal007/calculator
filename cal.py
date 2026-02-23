@@ -11,14 +11,7 @@ def multiply(num1,num2):
 
 def divide(num1:int ,num2:int):
      return num1/num2
-
-def main():
-    # num1 = int(input("enter your first number"))
-    # num2 =  int(input("enter your second number"))
-    # op =  input("enter what operation you wanna do")
-    # nums = re.split(r"[+\-*/]", "2+7")
-
-    i = input("enter a number statement")
+def expressionn():
     number = ""
 
     numbers = []
@@ -64,8 +57,21 @@ def main():
                 num2 = 0
         if j == len(numbers):
             print(num1)
+
+def bracket(expression):
+
+    while "(" in expression:
+        start = expression.rfind("(")
+        end = expression.rfind(")", start)
+        inside = expression[start + 1:end]
+        result = expressionn(inside)
+        expression = expression[:start] + str(int(result)) + expression[end +1:]
+        return expressionn(expression)
     
 
-        
-    
+def main():
+    i = input("enter a number statement")
+    result = bracket(i)
+    print(result)
+i = i[:startb] + i[endb + 1:]
 main()
