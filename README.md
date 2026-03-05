@@ -1,132 +1,136 @@
-# Simple Python Calculator
+# Modern Python Calculator (Tkinter)
 
-A lightweight command-line calculator written in Python.
-It parses a basic mathematical expression entered by the user and evaluates it sequentially.
-
-## 📌 Features
-
-* Supports basic arithmetic operations:
-
-  * Addition (`+`)
-  * Subtraction (`-`)
-  * Multiplication (`*`)
-  * Division (`/`)
-* Accepts a single-line number statement (e.g., `2+7`, `10*5`, `8/2`)
-* Sequential evaluation from left to right
-* No external dependencies required
+A simple **GUI Calculator built with Python and Tkinter** that evaluates mathematical expressions using a custom parser.
+The calculator supports basic arithmetic operations and bracket handling while providing a modern user interface.
 
 ---
 
-## 🛠 How It Works
+## Features
 
-1. The program prompts the user to enter a number statement.
-2. The input string is parsed character by character.
-3. Numbers and operators are separated into a list.
-4. Operations are executed sequentially.
-5. The final result is printed to the console.
+* Graphical User Interface using **Tkinter**
+* Custom **expression evaluation logic** (not using Python `eval()`)
+* Supports:
 
-Example input:
-
-```
-2+7
-```
-
-Output:
-
-```
-9
-```
-
-Example input:
-
-```
-10+5*2
-```
-
-Output:
-
-```
-30
-```
-
-> Note: The calculator evaluates expressions from left to right and does not follow mathematical operator precedence rules.
+  * Addition `+`
+  * Subtraction `-`
+  * Multiplication `*`
+  * Division `/`
+  * Parentheses `()`
+* Input validation for safe calculations
+* Backspace and clear functionality
+* Modern styled buttons and display
 
 ---
 
-## 🚀 Getting Started
+## Preview
 
-### Requirements
+The calculator includes:
 
-* Python 3.x
-
-### Run the Program
-
-```bash
-python calculator.py
-```
-
-Then enter your expression when prompted:
-
-```
-enter a number statement
-```
+* Large display for expressions
+* Grid-based button layout
+* Buttons for numbers, operators, brackets, and controls
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 calculator.py
 README.md
 ```
 
----
+Main components:
 
-## 🧠 Functions Overview
-
-* `add(num1, num2)` → Returns the sum
-* `subtract(num1, num2)` → Returns the difference
-* `multiply(num1, num2)` → Returns the product
-* `divide(num1, num2)` → Returns the quotient
-* `main()` → Handles input parsing and calculation logic
-
----
-
-## ⚠ Limitations
-
-* No support for:
-
-  * Parentheses
-  * Decimal numbers
-  * Negative numbers
-  * Operator precedence (PEMDAS/BODMAS)
-* Division by zero is not handled explicitly.
-* Minimal error validation.
+| Component            | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| `findbracket()`      | Converts an expression string into numbers and operators |
+| `evaluate()`         | Processes the mathematical expression step by step       |
+| `solve_expression()` | Validates and solves expressions safely                  |
+| `CalculatorApp`      | Tkinter GUI for the calculator                           |
 
 ---
 
-## 🔮 Possible Improvements
+## Requirements
 
-* Add operator precedence support
-* Support floating-point numbers
-* Implement better error handling
-* Add unit tests
-* Convert into a GUI application
-* Package as a pip-installable CLI tool
+Python **3.x**
 
----
+Tkinter (usually included with Python)
 
-## 📜 License
-
-This project is open-source and free to use for learning purposes.
+No external libraries are required.
 
 ---
 
-If you'd like, I can also create:
+## Installation
 
-* A more advanced README (for GitHub portfolio presentation)
-* A version with badges
-* A version written more casually
-* A technically deeper README explaining the parsing logic
+Clone the repository:
 
-Tell me your target (school project, portfolio, beginner repo, etc.) and I’ll tailor it precisely.
+```bash
+git clone https://github.com/yourusername/python-calculator.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd python-calculator
+```
+
+Run the program:
+
+```bash
+python calculator.py
+```
+
+---
+
+## Example Calculations
+
+```
+2+3
+5*8
+(10+5)*2
+100/4
+```
+
+---
+
+## How It Works
+
+1. The user enters a mathematical expression using the GUI buttons.
+2. The expression is validated to ensure only allowed characters are used.
+3. The custom parser converts the string into numbers and operators.
+4. The calculator processes the operations sequentially and displays the result.
+
+---
+
+## Limitations
+
+* Does not fully implement **BODMAS precedence** yet.
+* Decimal numbers may have limited support.
+* Nested brackets may not work correctly in complex expressions.
+
+---
+
+## Future Improvements
+
+Possible enhancements:
+
+* Full **BODMAS/PEMDAS implementation**
+* Better **decimal number handling**
+* Keyboard input support
+* History of calculations
+* Dark mode UI
+* Scientific calculator features
+
+---
+
+## License
+
+This project is open-source and free to use for educational purposes.
+
+---
+
+## Author
+
+Developed by **Rana Arsal**
+
+Python GUI project using Tkinter.
